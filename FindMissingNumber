@@ -1,0 +1,16 @@
+function findMissingNumber(nums) {
+    const n = nums.length;
+
+    const expectedSum = (n * (n + 1)) / 2;
+
+    const actualSum = nums.reduce((acc, num) => acc + num, 0);
+
+    const missingNumber = expectedSum - actualSum;
+
+    return missingNumber;
+}
+
+
+
+const nums = [3, 0, 1];
+console.log(findMissingNumber(nums));
